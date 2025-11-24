@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
     <style>
-        /* Variables de Diseño (Paleta Oscura con Acento Dorado) */
+        /* Variables de Diseño */
         :root {
             --color-fondo-principal: #0D1B2A; /* Azul Oscuro Profundo */
             --color-fondo-secundario: #1B263B; /* Azul Oscuro Medio (Contraste) */
@@ -69,7 +69,7 @@
             align-items: center;
             text-align: center;
             background-color: var(--color-fondo-secundario);
-            background-image: url('portada-jaguar.jpg'); /* ASEGÚRATE DE USAR ESTE NOMBRE */
+            background-image: url('portada-jaguar.jpg'); 
             background-size: cover;
             background-position: center;
             position: relative;
@@ -81,7 +81,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.75); /* Más oscuro para mejor legibilidad */
+            background: rgba(0, 0, 0, 0.75);
         }
 
         .contenido-portada {
@@ -92,7 +92,7 @@
         h1 {
             font-size: 4em;
             color: var(--color-acento-dorado);
-            text-shadow: 0 0 15px rgba(255, 195, 0, 0.5); /* Sutil brillo */
+            text-shadow: 0 0 15px rgba(255, 195, 0, 0.5);
             margin-bottom: 0.1em;
         }
 
@@ -137,7 +137,7 @@
             text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
         }
 
-        /* CONTENEDORES DE INFORMACIÓN */
+        /* CONTENEDORES DE INFORMACIÓN (Flexbox) */
         .info-container {
             display: flex;
             gap: 40px;
@@ -154,7 +154,7 @@
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
         }
         
-        /* ESTILOS ESPECÍFICOS DE BLOQUES */
+        /* ESTILOS DE FLUJO (Diagrama) */
         .mapa-interactivo, .quiz, .beneficios-grafico, .fuentes-box {
             background-color: var(--color-fondo-secundario);
             padding: 30px;
@@ -199,7 +199,7 @@
             }
         }
 
-        /* MÓDULO 3: QUIZ (Mantener estilos funcionales) */
+        /* MÓDULO 3: QUIZ */
         .opcion-quiz {
             background-color: var(--color-fondo-principal);
             padding: 15px;
@@ -212,14 +212,34 @@
             background-color: rgba(255, 195, 0, 0.2);
         }
         .correcta {
-            background-color: #4CAF50 !important; /* Verde */
+            background-color: #4CAF50 !important;
             color: white;
         }
         .incorrecta {
-            background-color: #f44336 !important; /* Rojo */
+            background-color: #f44336 !important;
             color: white;
         }
         
+        /* MÓDULO 5: REFERENCIAS */
+        .fuente-item {
+            cursor: pointer;
+            background-color: var(--color-fondo-principal);
+            padding: 15px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border-left: 5px solid var(--color-acento-dorado);
+            font-weight: 500;
+        }
+        .contenido-fuente {
+            padding: 10px 15px;
+            background-color: rgba(255, 255, 255, 0.05);
+            margin-bottom: 10px;
+            border-radius: 0 0 5px 5px;
+            display: none;
+            font-size: 0.95em;
+            font-style: italic;
+        }
+
     </style>
 </head>
 <body>
@@ -239,7 +259,7 @@
             <h1>CÓMO LA IA RESCATA AL REY DE LA SELVA</h1>
             
             <p class="subtitulo">
-                **Mensaje Central:** La tecnología es una herramienta de decisión. La IA nos da la información precisa y rápida para salvar especies clave y **proteger los ecosistemas de México**.
+                <strong>Mensaje Central:</strong> La tecnología es una herramienta de decisión. La IA nos da la información precisa y rápida para salvar especies clave y <strong>proteger los ecosistemas de México</strong>.
             </p>
             
             <a href="#problema-biologico" class="boton-inicio">INICIAR GUÍA <i class="fas fa-arrow-down"></i></a>
@@ -253,14 +273,14 @@
             <div class="info-content">
                 <h3>El Estatus de una Especie Clave</h3>
                 <p>El jaguar (*Panthera onca*) es el felino más grande del continente y un <strong>depredador tope</strong> insustituible. Esto significa que está en la cima de la cadena trófica, regulando las poblaciones de herbívoros. Por su rol, es considerada una **especie sombrilla**:</p>
-                <p>➡️ **Al proteger al jaguar y su gran territorio, automáticamente protegemos el ecosistema completo** y a cientos de especies más pequeñas que viven bajo su "sombra".</p>
+                <p>➡️ <strong>Al proteger al jaguar y su gran territorio, automáticamente protegemos el ecosistema completo</strong> y a cientos de especies más pequeñas que viven bajo su "sombra".</p>
                 <p>En México, la pérdida de hábitat ha provocado que el jaguar se clasifique en <strong>Peligro de Extinción</strong> según la **NOM-059-SEMARNAT**. La conservación requiere datos continuos sobre su número y distribución.</p>
             </div>
             
             <div class="info-visual mapa-interactivo">
                 <h4>[ESPACIO INTERACTIVO: Distribución y Amenazas]</h4>
-                <p style="color: var(--color-acento-dorado);"><strong>Objetivo:</strong> Reforzar el concepto de Biología II (Especie Sombrilla) mostrando la magnitud del hábitat necesario.</p>
-                <p><strong>Tarea:</strong> Incluir un mapa de México y, al hacer clic en [Selva Lacandona] o [Reserva Dzilam de Bravo], mostrar datos de población.</p>
+                <p style="color: var(--color-acento-dorado);"><strong>Objetivo:</strong> Reforzar el concepto de Biología II (Especie Sombrilla) mostrando la magnitud del hábitat.</p>
+                <p><strong>Tarea:</strong> Incluir aquí una imagen de un mapa de México con las zonas de jaguar resaltadas. Al hacer clic, se puede simular un pop-up.</p>
             </div>
         </div>
     </section>
@@ -290,7 +310,7 @@
                 </span>
             </p>
             <div id="ia-popup" style="display: none; background: rgba(0, 0, 0, 0.4); padding: 10px; border-radius: 5px; margin-top: 10px; border: 1px dashed var(--color-secundario-claro);">
-                *El algoritmo de **Machine Learning** ha sido entrenado con miles de fotos de jaguares. Su función es reducir el tiempo de análisis de meses a minutos, permitiendo a los científicos enfocarse en la toma de decisiones.*
+                <p>El algoritmo de <strong>Machine Learning</strong> ha sido entrenado con miles de fotos de jaguares. Su función es reducir el tiempo de análisis de meses a minutos, permitiendo a los científicos enfocarse en la toma de decisiones.</p>
             </div>
         </div>
     </section>
@@ -300,14 +320,14 @@
         
         <p>Cada jaguar es único. Sus manchas, llamadas **rosetas**, tienen un patrón tan distintivo como una huella dactilar humana. La IA aprovecha esta característica biológica, usando algoritmos avanzados para:</p>
         <ul>
-            <li>**Diferenciar** jaguares entre sí.</li>
-            <li>**Rastrear** a un individuo a lo largo del tiempo y el territorio.</li>
-            <li>**Contar** la población total con una precisión sin precedentes.</li>
+            <li><strong>Diferenciar</strong> jaguares entre sí.</li>
+            <li><strong>Rastrear</strong> a un individuo a lo largo del tiempo y el territorio.</li>
+            <li><strong>Contar</strong> la población total con una precisión sin precedentes.</li>
         </ul>
         
         <div class="quiz" id="mini-quiz">
             <h3>Mini-Desafío: ¿Puedes Encontrar al Mismo Jaguar?</h3>
-            <p>Mira la **Foto A (Referencia)**. Haz clic en el recuadro que muestra al mismo jaguar. La IA hace esto miles de veces al día.</p>
+            <p>Mira la <strong>Foto A (Referencia)</strong>. Haz clic en el recuadro que muestra al mismo jaguar. La IA hace esto miles de veces al día.</p>
             
             <div style="display: flex; justify-content: space-around; flex-wrap: wrap; margin-top: 20px; gap: 15px;">
                 <div style="text-align: center;">
@@ -329,12 +349,12 @@
             <div class="info-content">
                 <h3>Beneficios: Eficiencia y Corredores Biológicos</h3>
                 <p>La IA permite la **gestión adaptativa** de la conservación. Al conocer la distribución exacta de los jaguares en tiempo real, se pueden trazar y proteger **corredores biológicos** (rutas de paso seguras) que conectan hábitats fragmentados, garantizando la diversidad genética.</p>
-                <p>La capacidad de procesamiento de datos de la IA ofrece un **ahorro de tiempo** de hasta el 98% en la revisión de imágenes.</p>
+                <p>La capacidad de procesamiento de datos de la IA ofrece un <strong>ahorro de tiempo</strong> de hasta el 98% en la revisión de imágenes.</p>
             </div>
             
             <div class="info-visual beneficios-grafico">
                 <h4>Gráfico: Ahorro de Tiempo</h4>
-                <p style="color: var(--color-acento-dorado);">**Gráfico Placeholder:** Muestra dos barras: 1) Revisión Manual (500 horas) vs. 2) Revisión con IA (10 horas).</p>
+                <p style="color: var(--color-acento-dorado);"><strong>Gráfico Placeholder:</strong> Muestra dos barras: 1) Revisión Manual (500 horas) vs. 2) Revisión con IA (10 horas).</p>
             </div>
         </div>
         
@@ -343,7 +363,7 @@
         <button id="btn-etica" class="boton-inicio" style="background-color: #A31F1F; margin-top: 15px;">EXPLORAR RIESGOS ÉTICOS <i class="fas fa-exclamation-triangle"></i></button>
         <div id="etica-popup" style="display: none; padding: 20px; margin-top: 20px; border: 2px solid #A31F1F; background-color: rgba(163, 31, 31, 0.2); border-radius: 5px;">
             <h4>Discusión Ética: Uso Indebido de Datos y Caza Furtiva</h4>
-            <p>Si la base de datos de patrones o la ubicación de los jaguares fueran filtradas o hackeadas, los cazadores furtivos podrían obtener información para rastrear y eliminar a los individuos más valiosos. Esto requiere protocolos de seguridad de datos extremadamente estrictos (lo que se conoce como **ética de la conservación**).</p>
+            <p>Si la base de datos de patrones o la ubicación de los jaguares fueran filtradas o hackeadas, los cazadores furtivos podrían obtener información para rastrear y eliminar a los individuos más valiosos. Esto requiere protocolos de seguridad de datos extremadamente estrictos (lo que se conoce como <strong>ética de la conservación</strong>).</p>
         </div>
     </section>
 
@@ -355,7 +375,7 @@
         
         <div class="fuentes-box">
             <h3 style="color: var(--color-acento-dorado); border-bottom: 1px solid var(--color-acento-dorado); padding-bottom: 10px;">Fuentes Citadas (Formato APA)</h3>
-            <p style="font-size: 0.9em; margin-top: 20px;">Haz clic en cada título para ver la referencia completa:</p>
+            <p style="font-size: 0.9em; margin-top: 20px;"><strong>Instrucción:</strong> Haz clic en cada título para ver la referencia completa.</p>
 
             <div class="fuente-item" onclick="toggleFuente('f1')">1. WWF (Organización de Conservación) <i class="fas fa-chevron-down"></i></div>
             <div id="f1" class="contenido-fuente">WWF (Fondo Mundial para la Naturaleza). (2022, 4 de febrero). <em>Tecnología e IA, herramientas clave para la conservación del jaguar</em>.</div>
@@ -373,7 +393,7 @@
             <div id="f5" class="contenido-fuente">Chávez, C., De la Torre, A., Bárcenas, H., & Medellín, R. A. (2021). Integrating artificial intelligence and camera traps for monitoring felids in Mexico. <em>Therya</em>, <em>12</em>(2), 219-228.</div>
         </div>
         
-        <p style="text-align: center; margin-top: 50px; font-weight: 500; color: var(--color-secundario-claro);">Proyecto de Biología II | **Universidad de Guadalajara** | Equipo: Juan, Zahira, Jonathan, Violeta.</p>
+        <p style="text-align: center; margin-top: 50px; font-weight: 500; color: var(--color-secundario-claro);">Proyecto de Biología II | <strong>Universidad de Guadalajara</strong> | Equipo: Juan, Zahira, Jonathan, Violeta.</p>
     </section>
 
     <script>
@@ -413,12 +433,13 @@
             });
         });
 
-        // Lógica para el botón de Ética (Módulo 4) y Pop-up de IA (Módulo 2)
+        // Lógica para el botón de Ética (Módulo 4)
         document.getElementById('btn-etica').addEventListener('click', function() {
             const popup = document.getElementById('etica-popup');
             popup.style.display = (popup.style.display === 'none' || popup.style.display === '') ? 'block' : 'none';
         });
 
+        // Lógica para el pop-up de IA (Módulo 2)
         document.getElementById('ia-proceso').addEventListener('click', function() {
             const popup = document.getElementById('ia-popup');
              popup.style.display = (popup.style.display === 'none' || popup.style.display === '') ? 'block' : 'none';
